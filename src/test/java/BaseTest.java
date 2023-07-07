@@ -10,7 +10,7 @@ public class BaseTest {
     public void configureDriver() {
         if (System.getProperty("browser").equals("yandex")) {
             Configuration.browserSize = "1920x1080";
-            System.setProperty("webdriver.chrome.driver", "C:\\webDriver\\bin\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\bin\\chromedriver.exe");
             DesiredCapabilities cup = new DesiredCapabilities();
             ChromeOptions options = new ChromeOptions();
             options.setBinary("C:\\Users\\Silith\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe");
@@ -22,3 +22,5 @@ public class BaseTest {
         }
     }
 }
+//mvn clean test -Dbrowser=yandex <- for YandexBrowser
+//mvn clean test -Dbrowser=chrome <- for ChromeBrowser
